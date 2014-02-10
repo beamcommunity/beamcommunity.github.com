@@ -1,6 +1,6 @@
 This is the BEAM Community page for 2013 projects.
 
-In this page we review all accepted projects as well all the Open Source Projects that took part in that year's summer!
+In this page we review all accepted projects as well all the Open Source Projects that took part in the 2013 edition!
 
 ## Accepted Projects
 
