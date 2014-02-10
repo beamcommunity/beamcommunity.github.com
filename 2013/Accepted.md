@@ -33,10 +33,9 @@ The extension development was continued by Erlang Solutions. Major part of the c
 
 
 ## Rebalancing for Disco’s Distributed File System
-The goal of this project is to implement a rebalancing mechanism for DDFS clusters to solve imbalance. Patrik started with implementing a feature which lets the master node collect diskinfo from the nodes. This information is later used to
-compute the average utilization and over/under-utilized nodes. He, then, added a blob selection functionality for the selection of write nodes such that nodes with the lowest disk utilization are chosen.
+The goal of this project is to implement a rebalancing mechanism for DDFS clusters to solve imbalance. Patrik started with implementing a feature which lets the master node collect diskinfo from the nodes. This information is later used to compute the average utilization and over/under-utilized nodes. He, then, added a blob selection functionality for the selection of write nodes such that nodes with the lowest disk utilization are chosen.
 
-Data objects are deleted from a node to free up space if the objects have enough replicas. He added logic to remove the references to the deleted replicas from the tags containing them. He also made changes to how the garbage collection is started so that the most over-utilized node will call is_orphan for all its objects to free up space. Locations of blobs that are reported as non existing during the build_map phase are now stored in the gc_blobs table and later removed from the tags containing those locations during the updating of tags.
+Data objects are deleted from a node to free up space if the objects have enough replicas. He added logic to remove the references to the deleted replicas from the tags containing them. He also made changes to how the garbage collection is started so that the most over-utilized node will call is_orphan for all its objects to free up space. Locations of blobs that are reported as non existing during the build_map phase are now stored in the gc_blobs table and later removed from the tags containing those locations during the updating of tags. Patrik's work will be merged into the develop branch after disco 0.5 is released and resolving a couple of issues in the code.
 
 <b>GSoCer:</b> Patrik Pettersson <br>
 <b>Mentor:</b> Prashanth Mundkur, Harry Nakos <br>
