@@ -43,6 +43,10 @@ The goal of this project is to implement a rebalancing mechanism for DDFS cluste
 
 Data objects are deleted from a node to free up space if the objects have enough replicas. He added logic to remove the references to the deleted replicas from the tags containing them. He also made changes to how the garbage collection is started so that the most over-utilized node will call `is_orphan` for all its objects to free up space. Locations of blobs that are reported as non existing during the build_map phase are now stored in the gc_blobs table and later removed from the tags containing those locations during the updating of tags. Patrik's work will be merged into the develop branch after disco 0.5 is released and resolving a couple of issues in the code.
 
+Update:
+This work is now merged into the develop branch of Disco with this [pull request](https://github.com/discoproject/disco/pull/492).
+
+
 * **GSoCer:** Patrik Pettersson
 * **Mentor:** Prashanth Mundkur, Harry Nakos
 
