@@ -47,10 +47,10 @@ His work has been merged and has played a substantial role in the adoption of El
 
 ## Participating OSS projects
 
-* [Disco proposals](/2014/Project:-Disco) - Disco is a distributed computing framework based on the MapReduce paradigm
-* [Elixir proposals](/2014/Project:-Elixir) - Elixir is a functional meta-programming language that runs on the Erlang VM
-* [Erlang Development Environment proposals](/2014/Project:-Erlang-Development-Environment) - User friendly installers which set up the whole Erlang development environment
-* [MongooseIM proposals](/2014/Project:-MongooseIM) - MongooseIM is a robust and efficient XMPP server aimed at large installations
-* [Swirl proposals](/2014/Project:-Swirl) - swirl is a high-speed modern peer-to-peer content sharing and live streaming application, written in Erlang/OTP, and based on the new [PPSP draft protocol](http://datatracker.ietf.org/doc/draft-ietf-ppsp-peer-protocol/), broadly similar to BitTorrent
-* [Work Stealing on the Parallella proposals](/2014/Project:-Parallella) - Parallela aims to bring a super computer for everyone and this projects focus on bringing work strealing scheduling to the Parallella
-* [Zotonic proposals](/2014/Project:-Zotonic) - Zotonic is a high speed, real-time web framework and content management system 
+* [Disco proposals](/2014/Project:-Disco.md) - Disco is a distributed computing framework based on the MapReduce paradigm
+* [Elixir proposals](/2014/Project:-Elixir.md) - Elixir is a functional meta-programming language that runs on the Erlang VM
+* [Erlang Development Environment proposals](/2014/Project:-Erlang-Development-Environment.md) - User friendly installers which set up the whole Erlang development environment
+* [MongooseIM proposals](/2014/Project:-MongooseIM.md) - MongooseIM is a robust and efficient XMPP server aimed at large installations
+* [Swirl proposals](/2014/Project:-Swirl.md) - swirl is a high-speed modern peer-to-peer content sharing and live streaming application, written in Erlang/OTP, and based on the new [PPSP draft protocol](http://datatracker.ietf.org/doc/draft-ietf-ppsp-peer-protocol/), broadly similar to BitTorrent
+* [Work Stealing on the Parallella proposals](/2014/Project:-Parallella.md) - Parallela aims to bring a super computer for everyone and this projects focus on bringing work strealing scheduling to the Parallella
+* [Zotonic proposals](/2014/Project:-Zotonic.md) - Zotonic is a high speed, real-time web framework and content management system 
