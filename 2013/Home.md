@@ -1,18 +1,16 @@
 This is the BEAM Community page for 2013 projects.
 
-In this page we review all accepted projects as well all the Open Source Projects that took part in the 2013 edition!
-
 ## Accepted Projects
 
-This page lists down the projects accepted in GSoC 2013, in the BEAM community. You can navigate through the following and track the status of each project-
+This section lists down the projects accepted in GSoC 2013, in the BEAM community. You can check the result of each project below.
 
-* [Elixir - Debugger and Inspection](#elixir---debugger-and-inspection)
+* [Elixir: Debugger and Inspection](#elixir-debugger-and-inspection)
 * [Erlang Package Manager (epax)](#erlang-package-manager-epax)
 * [MongooseIM: XEP-0313 Message Archive Management](#mongooseim-xep-0313-message-archive-management)
 * [Rebalancing for Disco’s Distributed File System](#rebalancing-for-discos-distributed-file-system)
 * [Zotonic Moules Repository Integration](#zotonic-moules-repository-integration)
 
-### Elixir - Debugger and Inspection
+### Elixir: Debugger and Inspection
 
 The student worked on pretty printing for Elixir along the community. In particular, the community had already started working on pretty printing, however it was based on Wadler's work for Haskell (a lazy language) and the performance was not optimal for Elixir. The student ported the work to an OCaml based implementation as described in the "Strictly Pretty" paper by Christian Lindig.
 

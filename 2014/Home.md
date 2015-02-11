@@ -1,0 +1,56 @@
+This is the BEAM Community page for 2014 projects.
+
+## Accepted Projects
+
+This section lists down the projects accepted in GSoC 2014, in the BEAM community. You can check the result of each project below.
+
+* [Elixir on Windows](#elixir-on-windows)
+* [Work Stealing Scheduling on Parallella](#work-stealing-scheduling-on-parallella)
+* [Disco Worker in Haskell](#disco-worker-in-haskell)
+* [MongooseIM: XEP-0280 Message Carbons](#mongooseim-xep-0280-message-carbons)
+* [Live Streaming for Swirl Project](#live-streaming-for-swirl-project)
+* [Federation of Servers in Zotonic](#federation-of-servers-in-zotonic)
+
+### Elixir on Windows
+
+The student worked on improving the standard library and test coverage for Windows systems as well as providing a web installer for Windows developers.
+
+His work has been merged and has played a substantial role in the adoption of Elixir for Windows developers and gather positive feedback from many Windows users.
+
+* **GSoCer:** Chris Hyndman
+* **Mentor:** José Valim
+
+### Work Stealing Scheduling on Parallella
+
+* **GSoCer:** Aman Mangal
+* **Mentor:** Luca Favatella
+
+### Disco worker in Haskell
+
+* **GSoCer:** Katarzyna Streich
+* **Mentor:** Shayan Pooya
+
+### MongooseIM: XEP-0280 Message Carbons
+
+* **GSoCer:** Shambhu Prasad
+* **Mentor:** Stefan Strigler
+
+### Live Streaming for Swirl Project
+
+* **GSoCer:** Patrik Pettersson
+* **Mentor:** Dave Cottlehuber
+
+### Federation of Servers in Zotonic
+
+* **GSoCer:** Álvaro G. Pagliari
+* **Mentor:** Arjan Scherpenisse
+
+## Participating OSS projects
+
+* [Disco proposals](/2014/Project:-Disco) - Disco is a distributed computing framework based on the MapReduce paradigm
+* [Elixir proposals](/2014/Project:-Elixir) - Elixir is a functional meta-programming language that runs on the Erlang VM
+* [Erlang Development Environment proposals](/2014/Project:-Erlang-Development-Environment) - User friendly installers which set up the whole Erlang development environment
+* [MongooseIM proposals](/2014/Project:-MongooseIM) - MongooseIM is a robust and efficient XMPP server aimed at large installations
+* [Swirl proposals](/2014/Project:-Swirl) - swirl is a high-speed modern peer-to-peer content sharing and live streaming application, written in Erlang/OTP, and based on the new [PPSP draft protocol](http://datatracker.ietf.org/doc/draft-ietf-ppsp-peer-protocol/), broadly similar to BitTorrent
+* [Work Stealing on the Parallella proposals](/2014/Project:-Parallella) - Parallela aims to bring a super computer for everyone and this projects focus on bringing work strealing scheduling to the Parallella
+* [Zotonic proposals](/2014/Project:-Zotonic) - Zotonic is a high speed, real-time web framework and content management system 
