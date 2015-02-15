@@ -30,6 +30,8 @@ His work has been merged and has played a substantial role in the adoption of El
 * **GSoCer:** Katarzyna Streich
 * **Mentor:** Shayan Pooya
 
+In this project, Kasia created a Haskell library for submitting map-reduce jobs to Disco. This library is available [here](https://github.com/zuzia/haskell_worker). It has been modeled after Disco python and golang worker libraries. The input of the job can be from the web (http) or Disco Distributed FileSystem (ddfs). A couple of example programs have been added to simplify adoption.
+
 ### MongooseIM: XEP-0280 Message Carbons
 
 * **GSoCer:** Shambhu Prasad
