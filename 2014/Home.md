@@ -17,34 +17,36 @@ The student worked on improving the standard library and test coverage for Windo
 
 His work has been merged and has played a substantial role in the adoption of Elixir for Windows developers and gather positive feedback from many Windows users.
 
-* **GSoCer:** Chris Hyndman
+* **Student:** Chris Hyndman
 * **Mentor:** José Valim
 
 ### Work Stealing Scheduling on Parallella
 
-* **GSoCer:** Aman Mangal
+* **Student:** Aman Mangal
 * **Mentor:** Luca Favatella
 
 ### Disco worker in Haskell
 
-* **GSoCer:** Katarzyna Streich
+* **Student:** Katarzyna Streich
 * **Mentor:** Shayan Pooya
 
 In this project, Kasia created a Haskell library for submitting map-reduce jobs to Disco. This library is available [here](https://github.com/zuzia/haskell_worker). It has been modeled after Disco python and golang worker libraries. The input of the job can be from the web (http) or Disco Distributed FileSystem (ddfs). A couple of example programs have been added to simplify adoption.
 
 ### MongooseIM: XEP-0280 Message Carbons
 
-* **GSoCer:** Shambhu Prasad
+* **Student:** Shambhu Prasad
 * **Mentor:** Stefan Strigler
 
 ### Live Streaming for Swirl Project
 
-* **GSoCer:** Patrik Pettersson
+* **Student:** Patrik Pettersson
 * **Mentor:** Dave Cottlehuber
 
 ### Federation of Servers in Zotonic
 
-* **GSoCer:** Álvaro G. Pagliari
+After a definition phase with Zotonic's core developers to define the overall architecture of the federation setup, Alvaro has been working on the refactoring of Erlang's MQTT server implementation to support additional transportation channels, most importantly SSH connections. Besides this,  Alvaro implemented a new [client library](https://github.com/alvaropag/emqttcli) for MQTT, to be able to send MQTT messages over these trusted SSH connections in the server federation.
+
+* **Student:** Álvaro G. Pagliari
 * **Mentor:** Arjan Scherpenisse
 
 ## Participating OSS projects

@@ -16,7 +16,7 @@ The student worked on pretty printing for Elixir along the community. In particu
 
 The remaining of the student work went into an interactive/debugging tool and some of it was merged back as well. In particular, the discussions and proof of concepts developed by the student were helpful to improve Elixir's debugging facilities. He is still working on the project as part of his thesis.
 
-* **GSoCer:** Gustavo Brunoro
+* **Student:** Gustavo Brunoro
 * **Mentor:** José Valim
 
 ### Erlang Package Manager (epax)
@@ -25,14 +25,14 @@ The idea of a new package manager for Erlang is to have the concept of publisher
 
 Now, we will add the concept of publisher into Epax before we launch the first version. This will allow a user to add trusted publishers and their packages will be downloaded when required without any manual intervention unless of course absolutely necessary.
 
-* **GSoCer:** Aman Mangal
+* **Student:** Aman Mangal
 * **Mentor:** Eric Merritt, Jordan Wilberding
 
 ### MongooseIM: XEP-0313 Message Archive Management
 
 The extension development was continued by Erlang Solutions. Major part of the code developed by the student was merged. Based on benchmark results, several bottlenecks were removed and new optimizations were introduced. Redesigned module structure makes its behavior more flexible. Experimental Cassandra back-end was added.
 
-* **GSoCer:** Uvarov Michael
+* **Student:** Uvarov Michael
 * **Mentor:** Stefan Strigler
 
 ### Rebalancing for Disco’s Distributed File System
@@ -45,14 +45,14 @@ Update:
 This work is now merged into the develop branch of Disco with this [pull request](https://github.com/discoproject/disco/pull/492).
 
 
-* **GSoCer:** Patrik Pettersson
+* **Student:** Patrik Pettersson
 * **Mentor:** Prashanth Mundkur, Harry Nakos
 
 ### Zotonic Moules Repository Integration
 
 A new command line tool and admin module was developed, integrating the management of modules on a site with those available online from the zotonic modules repository. The admin module manager works by spawning an Erlang process to the command line module manager. By default, the modules are installed in $ZOTONIC_ROOT/priv/modules. Part of the work has been merged with the zotonic [master branch](https://github.com/zotonic/zotonic/commit/5675a76e47a4480aa87045354e0ffcd95244cab6). The admin module manager is available [here](https://github.com/mawuli-ypa/mod_zmm). Mawuli will continue on the project as there are some enhancements to make.
 
-* **GSoCer:** Mawuli Adzaku
+* **Student:** Mawuli Adzaku
 * **Mentor:** Andreas Stenius
 
 ## Participating OSS projects
