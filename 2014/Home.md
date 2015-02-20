@@ -22,22 +22,28 @@ His work has been merged and has played a substantial role in the adoption of El
 
 ### Work Stealing Scheduling on Parallella
 
+This project aimed to explore different strategies for work stealing in the Parallella board. Unfortunately, this project failed for being behind the schedule.
+
 * **Student:** Aman Mangal
 * **Mentor:** Luca Favatella
 
 ### Disco worker in Haskell
 
+In this project, Kasia created a Haskell library for submitting map-reduce jobs to Disco. This library is available [here](https://github.com/zuzia/haskell_worker). It has been modeled after Disco python and golang worker libraries. The input of the job can be from the web (http) or Disco Distributed FileSystem (ddfs). A couple of example programs have been added to simplify adoption.
+
 * **Student:** Katarzyna Streich
 * **Mentor:** Shayan Pooya
 
-In this project, Kasia created a Haskell library for submitting map-reduce jobs to Disco. This library is available [here](https://github.com/zuzia/haskell_worker). It has been modeled after Disco python and golang worker libraries. The input of the job can be from the web (http) or Disco Distributed FileSystem (ddfs). A couple of example programs have been added to simplify adoption.
-
 ### MongooseIM: XEP-0280 Message Carbons
+
+Shambu added support for XEP-280 (Message Carbons) to Erlang based XMPP chat server MongooseIM. A lot of the work was also put to improve the test suite, including system tests. This project was also useful to check for any irregularities in message handling by the server due to any discrepancy between this new module and existing ones.
 
 * **Student:** Shambhu Prasad
 * **Mentor:** Stefan Strigler
 
 ### Live Streaming for Swirl Project
+
+The Swirl project aims to bring peer-to-peer streaming to the world and the student worked on many funcionalities required , like secure hasing checking, and other live streaming related functionalities.
 
 * **Student:** Patrik Pettersson
 * **Mentor:** Dave Cottlehuber
