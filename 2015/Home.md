@@ -14,13 +14,22 @@ This section lists down the projects accepted in GSoC 2015, in the BEAM communit
 ### Zotonic - Simplified and Secured Logins
 
 The idea behind this project is promote easy login process for
-Zotonic.com. With increasing web applications, there needs to be way
-for users to logins which is more hassle free. Moreover this needs to
-be secure and safe.
+Zotonic.com by using Erlang as it's programming language. With increasing 
+web applications, there needs to be way for users to login which is more hassle
+free. Moreover this needs to be secure and safe.
+
+This is achieved by multi-factor authentication system in which user is verified
+multiple times, firstly by username and password and after that authentication
+by user's email(by sending a link having uuid connected to it) or an 
+OTP(One time password) sent to his mobile phone.The aim of the project is to
+provide more security to user's account but with the main goal to make
+authentication more user-friendly and easy-to-use.
+
 
 * **Student:** Anant
 * **Mentor:** Arjan Scherpenisse
 
+Source code: [https://github.com/anant2047/zotonic.git](https://github.com/anant2047/zotonic.git)
 
 ### Ejabberd - Grapherl : stats aggregation & graphing
 
