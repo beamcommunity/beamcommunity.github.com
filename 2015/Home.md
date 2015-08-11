@@ -1,15 +1,15 @@
-This is the BEAM Community page for 2014 projects.
+This is the BEAM Community page for 2015 projects.
 
 ## Accepted Projects
 
-This section lists down the projects accepted in GSoC 2014, in the BEAM community. You can check the result of each project below.
+This section lists down the projects accepted in GSoC 2015, in the BEAM community. You can check the result of each project below.
 
 * [Ejabberd - Grapherl : stats aggregation & graphing](#ejabberd-grapherl-stats-aggregation-graphing)
 * [Ejabberd - XEP-0357 app server](#xep-0357-for-ejabberd-app-server)
 * [Elixir - NoSQL adapters for Ecto](#elixir-nosql-adapters-for-ecto)
 * [Elixir - Project Jupyter integration](#elixir-project-jupyter-integration)
 * [MongooseIM - Implementation of XEP-0322](#implementation-of-xep-0322-efficient-xml-interchange-exi-format)
-* [Zotonic - Simplified and Secured Logins](#zotonic-simplified-and-secured-logins)
+* [Zotonic - Simplified and Secured Logins](#zotonic---simplified-and-secured-logins)
 
 ### Zotonic - Simplified and Secured Logins
 
