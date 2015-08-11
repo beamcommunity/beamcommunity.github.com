@@ -60,17 +60,16 @@ or other NoSQL adapters.
 
 ### Elixir - Project Jupyter integration
 
-Fault tolerance approach proved to be extremely effective in area of
-distributed systems. Elixir is a new language which can apply this
-solution to web applications. In this proposal I do not only present
-some kind of simple vision of how Elixir can become significant in
-data science but also I share my point of view about important
-matters: why I decide to choose this specific project, what is really
-important to accomplish it as well as short description of my
-experience related to this idea.
+[iPython](http://ipython.org/) has gained more and more traction in the Python community with its rich environment for programming. Recently, the iPython project evolved into the [Jupyter Project](https://github.com/beamcommunity/beamcommunity.github.com/wiki/jupyter.org), which aims to provide the same rich environment, not only for Python, but for a diverse range of programming languages.
+
+Many languages have already started to integrate with the Jupyter Project, like [Julia](https://github.com/JuliaLang/IJulia.jl), [Haskell](https://github.com/gibiansky/IHaskell) and [Erlang](https://github.com/robbielynch/ierlang). The goal of this project is to provide integration with the Elixir programming language.
+
+Expected results: Basic integration with the Jupyter Project
 
 * **Student:** Piotr Przetacznik
 * **Mentor:** José Valim
+
+Source code: [https://github.com/pprzetacznik/IElixir](https://github.com/pprzetacznik/IElixir)
 
 
 ### MongooseIM - Implementation of XEP-0322
