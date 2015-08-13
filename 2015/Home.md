@@ -54,6 +54,7 @@ module. The app server part shall be reusable by other XMPP servers.
 * **Student:** Christian Ulrich
 * **Mentor:** Holger Weiß
 
+Source code: https://github.com/royneary/mod_push and https://github.com/royneary/oshiya
 
 ### Elixir - NoSQL adapters for Ecto
 
