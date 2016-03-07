@@ -78,28 +78,59 @@
         padding-top: 0;
       }
         #content menu {
-          background: #eee;
+          background: #fc0;
           list-style: none;
-          padding: 0 20px;
-          margin: 0 -40px;
+          
+          padding: 0;
+          margin: 0;
         }
-        #content menu li,
+        #content menu li {
+          display: inline-block;
+          min-width: 33.3%;
+        }
         #content menu li a {
           display: inline-block;
-        }
-        #content menu li a {
+          padding: 15px 0;
+          width: 100%;
+          
           text-decoration: none;
-          padding: 20px;
+          text-align: center;
+          color: #223953;
         }
         #content menu li a:hover,
         #content menu li a:active {
-          background: #ddd;
+          background: #fd0;
           color: #000;
+        }
+        
+        #content #nav {
+          background: #fc0;
+          padding: 0 40px;
+          margin: 0 -40px;
         }
       
       #footer {
         background: #eee;
       }
+      
+      @media screen and (max-width:550px) {
+      
+        #header-block h1 {
+          background-size: auto 65px;
+          height: 100px;
+        }
+        #content menu {
+          margin-left: -20px;
+        }
+        #content menu li {
+          display: block;
+        }
+        #content menu li a {
+          padding-left: 20px;
+          text-align: left;
+        }
+      }
+      
   </style>
 </head>
 <body>
@@ -112,11 +143,13 @@
   </div>
     
   <div id="content">
-    <menu>
-      <li><a href="/" class="button"><strong>Home</strong></a></li>
-      <li><a href="https://github.com/beamcommunity/beamcommunity.github.com/wiki" class="button"><strong>Projects / Ideas Wiki</strong></a></li>
-      <li><a href="/#for-students" class="button"><strong>For students</strong></a></li>
-    </menu>
+    <div id="nav">
+      <menu>
+        <li><a href="/" class="button"><strong>Home</strong></a></li><!--
+        --><li><a href="https://github.com/beamcommunity/beamcommunity.github.com/wiki" class="button"><strong>Projects / Ideas Wiki</strong></a></li><!--
+        --><li><a href="/#for-students" class="button"><strong>For students</strong></a></li>
+      </menu>
+    </div>
 
     <section>
       <h3>Welcome to the BEAM Community</h3>
