@@ -1,73 +1,204 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>The BEAM Community</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/main.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
-  </head>
-  <body>
-
-    <header>
-      <div class="header-wrapper">
-        <h1>BEAM Community</h1>
-        <p>From distributed systems, to robust servers and language design on the Erlang VM</p>
-      </div>
-    </header>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  
+  <title>The BEAM Community</title>
+  <meta name="description" content="Our goal is to host relevant projects in the Erlang and Elixir communities, making it easy for those projects to participate in the Google Summer of Code." />
+  
+  <link rel="canonical" href="https://beamcommunity.github.io" />
+  
+  <meta property="og:site_name" content="BEAM Community" />
+  <meta property="og:title" content="The BEAM Community" />
+  <meta property="og:url" content="https://beamcommunity.github.io" />
+  <meta property="og:description" content="Our goal is to host relevant projects in the Erlang and Elixir communities, making it easy for those projects to participate in the Google Summer of Code." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://beamcommunity.github.io/images/ogimage.png" />
+  
+  <meta content="summary" name="twitter:card" />
+  <meta property="twitter:description" content="Our goal is to host relevant projects in the Erlang and Elixir communities, making it easy for those projects to participate in the Google Summer of Code." />
+  
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #223953;
+      
+      line-height: 150%;
+      font-family: sans-serif;
+      font-weight: 300;
+    }
     
-    <div id="banner">
-      <div>
-        <a href="/" class="button"><strong>Home</strong></a>
+    a {
+      text-decoration: none;
+      color: #3567b4;
+    }
+      a:hover,
+      a:active {
+        text-decoration: underline;
+      }
+    
+    code {
+      background: #eee;
+      padding: 2px 4px;
+    }
+    
+    #header {
+      background: #0f1d2f;
+      padding-top: 40px;
+    }
+      #header-block,
+      #content,
+      #footer {
+        max-width: 650px;
+        padding: 20px 40px;
+        margin: 0 auto;
+      }
+      
+      #header-block {
+        background: #3567b4;
+        color: #fff;
+      }
+        #header-block h1 {
+          background: url(images/beam-logo.png) left bottom no-repeat transparent;
+          background-size: auto 130px;
+          height: 160px;
+          
+          text-indent: -9999px;
+          margin: 0;
+        }
+        #header-block p {
+          padding-top: 20px;
+        }
+      
+      #content {
+        background: #fff;
+        padding-top: 0;
+      }
+        #content menu {
+          background: #fc0;
+          list-style: none;
+          
+          padding: 0;
+          margin: 0;
+        }
+        #content menu li {
+          display: inline-block;
+          min-width: 33.3%;
+        }
+        #content menu li a {
+          display: inline-block;
+          padding: 15px 0;
+          width: 100%;
+          
+          text-decoration: none;
+          text-align: center;
+          color: #223953;
+        }
+        #content menu li a:hover,
+        #content menu li a:active {
+          background: #fd0;
+          color: #000;
+        }
+        
+        #content #nav {
+          background: #fc0;
+          padding: 0 40px;
+          margin: 0 -40px 40px -40px;
+        }
+      
+      #footer {
+        background: #eee;
+      }
+      
+      @media screen and (max-width:550px) {
+      
+        #header-block h1 {
+          background-size: auto 65px;
+          height: 100px;
+        }
+        #content #nav,
+        #content menu {
+          margin-left: 0;
+          margin-right: 0;
+          padding-left: 0;
+          padding-right: 0;
+        }
+        #content menu li {
+          border-bottom: 2px solid #fff;
+          display: block;
+        }
+        #content menu li a {
+          margin-left: -10px;
+          padding-left: 10px;
+          padding-right: 10px;
+          
+          background: #fc0;
+          text-align: left;
+        }
+        
+        #header-block,
+        #content {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      }
+      
+  </style>
+</head>
+<body>
 
-        <a href="https://github.com/beamcommunity/beamcommunity.github.com/wiki" class="button"><strong>Projects / Ideas Wiki</strong></a>
-
-        <a href="/#for-students" class="button"><strong>For students</strong></a>
-      </div>
+  <div id="header">
+    <header id="header-block">
+      <h1>BEAM Community</h1>
+      <p>From distributed systems, to robust servers and language design on the Erlang VM</p>
+    </header>
+  </div>
+    
+  <div id="content">
+    <div id="nav">
+      <menu>
+        <li><a href="/" class="button"><strong>Home</strong></a></li><!--
+        --><li><a href="https://github.com/beamcommunity/beamcommunity.github.com/wiki" class="button"><strong>Projects / Ideas Wiki</strong></a></li><!--
+        --><li><a href="/#for-students" class="button"><strong>For students</strong></a></li>
+      </menu>
     </div>
 
-    <div class="wrapper">
-      <nav>
-        <ul>
-        </ul>
-      </nav>
-      <section>
-        <h3>Welcome to the BEAM Community</h3>
+    <section>
+      <h2>Welcome to the BEAM Community</h2>
 
-        <p>The BEAM Community is a group of projects that run on the Erlang VM. Our goal is to host relevant projects in the Erlang and Elixir communities, making it easy for those projects to participate in the <a href="https://developers.google.com/open-source/gsoc/" target="_blank">Google Summer of Code (GSoC) 2016</a> (and similar initiatives), giving interested students a wide range of projects to choose from.</p>
+      <p>The BEAM Community is a group of projects that run on the Erlang VM. Our goal is to host relevant projects in the Erlang and Elixir communities, making it easy for those projects to participate in the <a href="https://developers.google.com/open-source/gsoc/" target="_blank">Google Summer of Code (GSoC) 2016</a> (and similar initiatives), giving interested students a wide range of projects to choose from.</p>
 
-        <p>The <a href="http://en.wikipedia.org/wiki/Erlang_(programming_language)" target="_blank">Erlang VM</a> was originally designed by Ericsson to support distributed, fault-tolerant, soft-real-time, non-stop applications. Many companies around the world like Amazon, Heroku and Activision use the Erlang VM in their stack and databases such as <a href="http://couchdb.apache.org/" target="_blank">CouchDB</a> and <a href="http://basho.com/riak/" target="_blank">Riak</a>, <a href="https://www.ejabberd.im">ejabberd XMPP server</a> and programming languages like <a href="http://elixir-lang.org">Elixir</a> are built on top of it too.</p>
+      <p>The <a href="http://en.wikipedia.org/wiki/Erlang_(programming_language)" target="_blank">Erlang VM</a> was originally designed by Ericsson to support distributed, fault-tolerant, soft-real-time, non-stop applications. Many companies around the world like Amazon, Heroku and Activision use the Erlang VM in their stack and databases such as <a href="http://couchdb.apache.org/" target="_blank">CouchDB</a> and <a href="http://basho.com/riak/" target="_blank">Riak</a>, <a href="https://www.ejabberd.im">ejabberd XMPP server</a> and programming languages like <a href="http://elixir-lang.org">Elixir</a> are built on top of it too.</p>
 
-        <p>BEAM Community has been accepted again in 2016 as a <a href="https://summerofcode.withgoogle.com/organizations/5748418722922496/">mentoring organisation</a>, so this the right time to get involved !</p>
+      <p>BEAM Community has been accepted again in 2016 as a <a href="https://summerofcode.withgoogle.com/organizations/5748418722922496/">mentoring organisation</a>, so this the right time to get involved !</p>
 
-        <h3 id="for-students">I'm a student, what should I do?</h3>
+      <h3 id="for-students">I'm a student, what should I do?</h3>
 
-        <p>Now is a great time to get started! Go over our <a href="https://github.com/beamcommunity/beamcommunity.github.com/wiki">Projects / Ideas Wiki</a> and pick the projects and ideas that interest you the most! Also, <a href="https://groups.google.com/d/forum/beam-community" target="_blank">subscribe to our mailing list</a> and join us at <code>#beam-community</code> on irc.freenode.net.</p>
+      <p>Now is a great time to get started! Go over our <a href="https://github.com/beamcommunity/beamcommunity.github.com/wiki">Projects / Ideas Wiki</a> and pick the projects and ideas that interest you the most! Also, <a href="https://groups.google.com/d/forum/beam-community" target="_blank">subscribe to our mailing list</a> and join us at <code>#beam-community</code> on irc.freenode.net.</p>
 
-        <p>Students should pick their projects and submit proposals from 14th to 25th March 2016. We recommend students to work closely with mentors in order to craft the best proposals. Our mailing list is the best place to ask questions and get more details about our projects!</p>
+      <p>Students should pick their projects and submit proposals from 14th to 25th March 2016. We recommend students to work closely with mentors in order to craft the best proposals. Our mailing list is the best place to ask questions and get more details about our projects!</p>
 
-        <p>For more information on Google Summer of Code itself, timelines and proposals, <a href="https://summerofcode.withgoogle.com/">visit the GSoC 2016 website</a>.</p>
+      <p>For more information on Google Summer of Code itself, timelines and proposals, <a href="https://summerofcode.withgoogle.com/">visit the GSoC 2016 website</a>.</p>
 
-        <h3>Previous years</h3>
+      <h3>Previous years</h3>
 
-        <p>In 2015, we have mentored 6 students in different projects throughout the summer. You can <a href="https://github.com/beamcommunity/beamcommunity.github.com/blob/master/2015/Home.md" target="_blank">see the results and participating projects in our 2015 archive</a>.</p>
+      <p>In 2015, we have mentored 6 students in different projects throughout the summer. You can <a href="https://github.com/beamcommunity/beamcommunity.github.com/blob/master/2015/Home.md" target="_blank">see the results and participating projects in our 2015 archive</a>.</p>
 
-        <p>In 2014, we have mentored 6 students in different projects throughout the summer. You can <a href="https://github.com/beamcommunity/beamcommunity.github.com/blob/master/2014/Home.md" target="_blank">see the results and participating projects in our 2014 archive</a>.</p>
+      <p>In 2014, we have mentored 6 students in different projects throughout the summer. You can <a href="https://github.com/beamcommunity/beamcommunity.github.com/blob/master/2014/Home.md" target="_blank">see the results and participating projects in our 2014 archive</a>.</p>
 
-        <p>In 2013, we have mentored 5 students in different projects throughout the summer. You can <a href="https://github.com/beamcommunity/beamcommunity.github.com/blob/master/2013/Home.md" target="_blank">see the results and participating projects in our 2013 archive</a>.</p>
+      <p>In 2013, we have mentored 5 students in different projects throughout the summer. You can <a href="https://github.com/beamcommunity/beamcommunity.github.com/blob/master/2013/Home.md" target="_blank">see the results and participating projects in our 2013 archive</a>.</p>
 
-      </section>
-      <footer>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></small></p>
-      </footer>
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-  </body>
+    </section>
+  </div>
+      
+  <div id="footer">
+    <footer>
+      <p><small><strong>&copy; 2016 BEAM Community.</strong> Hosted on GitHub Pages.</small></p>
+    </footer>
+  </div>
+
+</body>
 </html>
