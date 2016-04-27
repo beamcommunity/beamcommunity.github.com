@@ -503,8 +503,8 @@ table {
 }
 
 body {
-  font: 14px/22px "Quattrocento Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #666;
+  font: 15px/22px "Quattrocento Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
   font-weight: 300;
   margin: 0px;
   padding: 0px 0 20px 0px;
@@ -512,7 +512,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #333;
+  color: #333333;
   margin: 0 0 10px;
 }
 
@@ -531,10 +531,6 @@ h1 {
 h2 {
   font-size: 24px;
   color: #393939;
-}
-
-h3, h4, h5, h6 {
-  color: #666666;
 }
 
 h3 {
@@ -651,7 +647,7 @@ dt {
 }
 
 header {
-  padding: 25px 20px 40px 20px;
+  padding: 20px 0;
   margin: 0;
   position: fixed;
   top: 0;
@@ -659,7 +655,7 @@ header {
   right: 0;
   width: 100%;
   text-align: center;
-  background: url(../images/background.png) #4276b6;
+  background: #396CB4;
   -moz-box-shadow: 1px 0px 2px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 1px 0px 2px rgba(0, 0, 0, 0.75);
   -o-box-shadow: 1px 0px 2px rgba(0, 0, 0, 0.75);
@@ -668,32 +664,32 @@ header {
   -webkit-font-smoothing: antialiased;
   min-height: 76px;
 }
+header .header-wrapper {
+  width: 652px;
+  margin: 0 auto;
+  text-align: left;
+}
 header h1 {
-  font: 40px/48px "Copse", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #f3f3f3;
-  text-shadow: 0px 2px 0px #235796;
-  margin: 0px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  -ms-text-overflow: ellipsis;
+  width: 168px;
+  height: 68px;
+  background: url(../images/logo.png);
+  background-size: 168px 68px;
+  font-size: 0; line-height: 0;
+  margin-bottom: 15px;
 }
 header p {
   color: #d8d8d8;
   text-shadow: rgba(0, 0, 0, 0.2) 0 1px 0;
   font-size: 18px;
-  margin: 0px;
 }
 
 #banner {
   z-index: 100;
   left: 0;
-  right: 50%;
+  right: 0;
   height: 50px;
-  margin-right: -382px;
   position: fixed;
-  top: 115px;
+  top: 135px;
   background: #ffcc00;
   border: 1px solid #f0b500;
   -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
@@ -776,21 +772,12 @@ header p {
 #banner ul li a.button {
   background-color: #FFE788;
 }
-#banner #logo {
-  position: absolute;
-  height: 36px;
-  width: 36px;
-  right: 7px;
-  top: 7px;
-  display: block;
-  background: url(../images/octocat-logo.png);
-}
 
 section {
   width: 590px;
   padding: 30px 30px 50px 30px;
   margin: 20px 0;
-  margin-top: 190px;
+  margin-top: 210px;
   position: relative;
   background: #fbfbfb;
   -moz-border-radius: 3px;
@@ -913,12 +900,8 @@ footer {
     margin: 0;
   }
   header h1 {
-    font-size: 32px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -o-text-overflow: ellipsis;
-    -ms-text-overflow: ellipsis;
+    width: 112px; height: 45px;
+    background-size: 112px 45px;
   }
   header p {
     display: none;
@@ -934,6 +917,10 @@ footer {
     position: fixed;
     left: 20px;
   }
+  #banner > div {
+    left: 0;
+    margin-left: 0;
+  }
 
   section {
     margin-top: 130px;
@@ -948,16 +935,11 @@ footer {
 @media print, screen and (max-width: 480px) {
   header {
     position: relative;
-    padding: 5px 0px;
+    padding: 10px 30px;
     min-height: 0px;
   }
   header h1 {
-    font-size: 24px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -o-text-overflow: ellipsis;
-    -ms-text-overflow: ellipsis;
+    margin-bottom: 0;
   }
 
   section {
