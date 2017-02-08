@@ -6,7 +6,6 @@ This section lists down the projects accepted in GSoC 2016, in the BEAM communit
 
 * [Lasp – Distributed Intermediate Tree Elimination in Lasp](#participating-oss-projects)
 * [Lasp – Implementing op-based CRDTs in Lasp](#participating-oss-projects)
-* [Erlang – Prepare Erlang DBus for OTP](#participating-oss-projects)
 * [Elixir/Barrel – Implement an elixir backend for indexing and extending the database](#participating-oss-projects)
 * [Zotonic – Implementation of Real-time Statistics in Zotonic](#participating-oss-projects)
 * [ejabberd – Privileged Entity Support to Write Powerful External Components for ejabberd](#participating-oss-projects)
