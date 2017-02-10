@@ -4,7 +4,7 @@ This is the BEAM Community page for 2016 projects.
 
 This section lists down the projects accepted in GSoC 2016, in the BEAM community. You can check the result of each project below.
 
-* [ejabberd – Privileged Entity Support to Write Powerful External Components for ejabberd](#participating-oss-projects)
+* [ejabberd – Privileged Entity Support to Write Powerful External Components for ejabberd](#ejabberd--privileged-entity-support-to-write-powerful-external-components-for-ejabberd)
 * [ejabberd – Improve ejabberd configuration and extensibility with Elixir-based configuration DSL](#participating-oss-projects)
 * [Elixir/Barrel – Implement an elixir backend for indexing and extending the database](#participating-oss-projects)
 * [Lasp – Distributed Intermediate Tree Elimination in Lasp](#participating-oss-projects)
@@ -54,10 +54,19 @@ Lasp computations are formed using a small subset of a functional language. In f
 
 This project aims to enable Lasp to generate efficient reductions of these intermediate trees into a single value that represents the combination of multiple functions.
 
-* **Student:** Borja
-* **Mentor:** zeeshanlakhani
+* **Student:** Borja o'Cook
+* **Mentor:** Zeeshan Lakhani
+
+Report: [Lasp and the Google Summer of Code](https://ergl.github.io/gsoc2016.html)
 
 ### Lasp – Implementing op-based CRDTs in Lasp
+
+Conflict-free Replicated Data Types (CRDTs) make the design of eventually consistent systems non ad-hoc and anomaly-free by formalizing the reconciliation mechanism of diverging replicas. Pure operation-based (aka op-based) CRDTs are variants of CRDTs that are generic and more efficient as they allow for compact solutions in both the sent messages and the state size. On the other hand, Lasp is a new programming model designed to simplify large scale, fault-tolerant, distributed programming using state-based CRDTs. It would be very interesting to implement the operation-based approach in Lasp and compare it with the currently implemented state-based approach.
+
+* **Student**: g_unis
+* **Mentor**: Christopher Meiklejohn
+
+Source Code: [Pure op-based datatypes implementations](https://gist.github.com/gyounes/de1709f254e84812713079d34786afc8)
 
 ### Zotonic – Implementation of Real-time Statistics in Zotonic
 
