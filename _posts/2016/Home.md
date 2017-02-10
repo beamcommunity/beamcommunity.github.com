@@ -10,6 +10,7 @@ This section lists down the projects accepted in GSoC 2016, in the BEAM communit
 * [Lasp – Distributed Intermediate Tree Elimination in Lasp](#lasp--distributed-intermediate-tree-elimination-in-lasp)
 * [Lasp – Implementing op-based CRDTs in Lasp](#lasp--implementing-op-based-crdts-in-lasp)
 * [Zotonic – Implementation of Real-time Statistics in Zotonic](#zotonic--implementation-of-real-time-statistics-in-zotonic)
+* [Erlang Dbus: Prepare Erlang DBus for OTP](#)
 
 ### ejabberd – Privileged Entity Support to Write Powerful External Components for ejabberd
 
@@ -77,11 +78,18 @@ Implement a module which will help give insight into the traffic of a Zotonic se
 
 Source code: [tahteche/zotonic](https://github.com/tahteche/zotonic/commits/mod_admin_statistics?author=tahteche)
 
+### Erlang Dbus: Prepare Erlang DBus for OTP
+
+D-Bus is largely used as RPC mechanism on Linux-based systems but can be also used on any modern OS, thanks to multiple transports, not only dependant on the Linux OS.
+
+Some work needs to be done before proposing it as an OTP application: remove OS-dependant code: UNIX socket handling, use OTP-style Makefiles, integrates unit and functional testing, generates documentation.
+
+*Student gave up before completion.*
+
 ## Participating OSS projects
 
 * Barrel
-* Erlang
-* Elixir
+* [Erlang Dbus](https://github.com/lizenn/erlang-dbus)
 * Ejabberd
 * Lasp
 * Zotonic
