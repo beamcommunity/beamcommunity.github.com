@@ -10,7 +10,7 @@ This section lists down the projects accepted in GSoC 2016, in the BEAM communit
 * [Lasp – Distributed Intermediate Tree Elimination in Lasp](#lasp--distributed-intermediate-tree-elimination-in-lasp)
 * [Lasp – Implementing op-based CRDTs in Lasp](#lasp--implementing-op-based-crdts-in-lasp)
 * [Zotonic – Implementation of Real-time Statistics in Zotonic](#zotonic--implementation-of-real-time-statistics-in-zotonic)
-* [Erlang Dbus: Prepare Erlang DBus for OTP](#)
+* [Erlang Dbus: Prepare Erlang DBus for OTP](#erlang-dbus-prepare-erlang-dbus-for-otp)
 
 ### ejabberd – Privileged Entity Support to Write Powerful External Components for ejabberd
 
@@ -88,8 +88,8 @@ Some work needs to be done before proposing it as an OTP application: remove OS-
 
 ## Participating OSS projects
 
-* Barrel
+* [Barrel](https://barrel-db.org/)
 * [Erlang Dbus](https://github.com/lizenn/erlang-dbus)
-* Ejabberd
-* Lasp
-* Zotonic
+* [Ejabberd](https://www.ejabberd.im/)
+* [Lasp](https://lasp-lang.org/)
+* [Zotonic](http://zotonic.com/)
