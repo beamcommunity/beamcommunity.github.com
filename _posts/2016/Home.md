@@ -5,11 +5,11 @@ This is the BEAM Community page for 2016 projects.
 This section lists down the projects accepted in GSoC 2016, in the BEAM community. You can check the result of each project below.
 
 * [ejabberd – Privileged Entity Support to Write Powerful External Components for ejabberd](#ejabberd--privileged-entity-support-to-write-powerful-external-components-for-ejabberd)
-* [ejabberd – Improve ejabberd configuration and extensibility with Elixir-based configuration DSL](#participating-oss-projects)
-* [Elixir/Barrel – Implement an elixir backend for indexing and extending the database](#participating-oss-projects)
-* [Lasp – Distributed Intermediate Tree Elimination in Lasp](#participating-oss-projects)
-* [Lasp – Implementing op-based CRDTs in Lasp](#participating-oss-projects)
-* [Zotonic – Implementation of Real-time Statistics in Zotonic](#participating-oss-projects)
+* [ejabberd – Improve ejabberd configuration and extensibility with Elixir-based configuration DSL](#ejabberd--improve-ejabberd-configuration-and-extensibility-with-elixir-based-configuration-dsl)
+* [Elixir/Barrel – Implement an elixir backend for indexing and extending the database](#elixirbarrel--implement-an-elixir-backend-for-indexing-and-extending-the-database)
+* [Lasp – Distributed Intermediate Tree Elimination in Lasp](#lasp--distributed-intermediate-tree-elimination-in-lasp)
+* [Lasp – Implementing op-based CRDTs in Lasp](#lasp--implementing-op-based-crdts-in-lasp)
+* [Zotonic – Implementation of Real-time Statistics in Zotonic](#zotonic--implementation-of-real-time-statistics-in-zotonic)
 
 ### ejabberd – Privileged Entity Support to Write Powerful External Components for ejabberd
 
