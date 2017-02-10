@@ -1,4 +1,4 @@
-This is the BEAM Community page for 2016 projects.
+This is the BEAM Community page for 2016 projects. You can also check [official Google Summer of code page for 2016 results](https://summerofcode.withgoogle.com/archive/2016/organizations/6384003686858752/).
 
 ## Accepted Projects
 
