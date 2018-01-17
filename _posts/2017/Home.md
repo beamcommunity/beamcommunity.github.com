@@ -29,7 +29,7 @@ By leaving tedious formatting to the machine, code formatters provide a substant
 * **Mentors**: José Valim, whatyouhide
 
 
-### ejabberd – Ejabberd support for "let's encrypt" ACME protocol
+### ejabberd – Ejabberd support for "Let's Encrypt" ACME protocol
 
 The Automatic Certificate Management Environment (ACME) protocol is a communications protocol for automating interactions between certificate authorities and their users' web servers, allowing the automated deployment of public key infrastructure at very low cost. Supporting this protocol will reduce the complexity of acquiring certificates for TLS encryption, via the "Let's encrypt" certificate authority.
 
@@ -37,6 +37,7 @@ The final goal of this project is for ejabberd to fully support the ACME protoco
 
 * **Student:** Konstantinos Kallas
 * **Mentor**: Evgeny Khramtsov
+* **Result**: [blog.process-one.net/lets-encrypt-ejabberd](https://blog.process-one.net/lets-encrypt-ejabberd/)
 
 
 ### Erlang – ETS support for Erlang Lab
@@ -98,7 +99,7 @@ The goal of this project is to implement XEP-0198 for server-to-server communica
 
 * **Student:** Anna Mukharram
 * **Mentor:** Holger Weiß
-
+* **Result:** [blog.process-one.net/server-to-server-stream-management-support](https://blog.process-one.net/server-to-server-stream-management-support/)
 
 ## Participating OSS projects
 
