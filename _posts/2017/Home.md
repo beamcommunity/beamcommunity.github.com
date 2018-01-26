@@ -105,5 +105,6 @@ The goal of this project is to implement XEP-0198 for server-to-server communica
 
 * [Barrel](https://barrel-db.org/)
 * [Ejabberd](https://www.ejabberd.im/)
+* [Elixir](https://elixir-lang.org/)
 * [Lasp](https://lasp-lang.org/)
 * [Zotonic](http://zotonic.com/)
