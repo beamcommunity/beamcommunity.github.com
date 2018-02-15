@@ -25,10 +25,10 @@
       margin: 0;
       padding: 0;
       background: #223953;
+      color: #444;
 
-      line-height: 150%;
+      line-height: 140%;
       font-family: sans-serif;
-      font-weight: 300;
     }
 
     a {
@@ -39,6 +39,14 @@
       a:active {
         text-decoration: underline;
       }
+
+    h2 {
+      font-size: 2em;
+    }
+    h2, h3 {
+      margin-top: 2em;
+      line-height: 100%;
+    }
 
     code {
       background: #eee;
@@ -71,7 +79,14 @@
         }
         #header-block p {
           padding-top: 20px;
+          font-style: italic;
+          font-size: 0.9em;
         }
+          #header-block p em {
+            display: inline-block;
+            vertical-align: bottom;
+            font-size: 2em;
+          }
 
       #content {
         background: #fff;
@@ -81,33 +96,63 @@
           background: #fc0;
           list-style: none;
 
+          border-right: 1px solid #fff;
           padding: 0;
           margin: 0;
         }
         #content menu li {
+          border-left: 1px solid #fff;
           display: inline-block;
-          min-width: 33.3%;
+          min-width: 33%;
         }
         #content menu li a {
           display: inline-block;
-          padding: 15px 0;
+          padding: 16px 0;
           width: 100%;
 
           text-decoration: none;
           text-align: center;
+
+          font-size: 0.9em;
+          background: #fc0;
           color: #223953;
+        }
+        #content menu li * {
+          vertical-align: middle;
         }
         #content menu li a:hover,
         #content menu li a:active {
           background: #fd0;
           color: #000;
         }
+          #content menu li:first-child {
+            border-left: none;
+            min-width: auto;
+            display: none;
+
+            margin-left: -54px;
+            width: 54px;
+          }
+          #content menu li:first-child a {
+            background: none;
+          }
 
         #content #nav {
-          background: #fc0;
-          padding: 0 40px;
+          padding: 0;
           margin: 0 -40px 40px -40px;
         }
+          #content.padded {
+            padding-top: 54px;
+          }
+          #content #nav.sticky {
+            position: fixed;
+            max-width: 100%;
+            width: 730px;
+            top: 0;
+          }
+          #content #nav.sticky menu li:first-child {
+            display: inline-block;
+          }
 
       #footer {
         background: #eee;
@@ -119,25 +164,28 @@
           background-size: auto 65px;
           height: 100px;
         }
-        #content #nav,
-        #content menu {
+        #content #nav {
           margin-left: 0;
           margin-right: 0;
           padding-left: 0;
           padding-right: 0;
         }
+        #content menu {
+          margin-left: -10px;
+        }
         #content menu li {
           border-bottom: 2px solid #fff;
+          background: #fc0;
           display: block;
         }
         #content menu li a {
-          margin-left: -10px;
-          padding-left: 10px;
-          padding-right: 10px;
-
-          background: #fc0;
+          padding: 8px 0 8px 10px;
+          font-size: 0.75em;
           text-align: left;
         }
+          #content menu li:first-child {
+            display: none !important;
+          }
 
         #header-block,
         #content {
@@ -147,83 +195,132 @@
       }
 
   </style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      /* Make menu sticky */
+      function checkScroll() {
+        if ($(this).scrollTop() >= 40 + $('#header').height() ){  
+          $('#content').addClass('padded');
+          $('#nav').addClass('sticky');
+        }
+        else{
+          $('#content').removeClass('padded');
+          $('#nav').removeClass('sticky');
+        }
+      }
+
+      $(window).scroll(checkScroll);
+      checkScroll();
+
+      /* Trigger slide to section */
+      $('menu li a').on('click', function(event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top - 90
+          }, 600, function(){
+            window.location.hash = hash;
+          });
+        }
+      });
+    });
+  </script>
 </head>
 <body>
 
   <div id="header">
     <header id="header-block">
       <h1>BEAM Community</h1>
-      <p>From distributed systems, to robust servers and language design on the Erlang VM</p>
+      <p><em>&#8220;</em> Distributed Systems, Robust Servers and Language Design on the Erlang VM.<em>&#8221;</em></p>
     </header>
   </div>
 
   <div id="content">
     <div id="nav">
       <menu>
-        <li><a href="/" class="button"><strong>Home</strong></a></li><!--
-        --><li><a href="https://github.com/beamcommunity/beamcommunity.github.com/wiki" class="button"><strong>Projects / Ideas Wiki</strong></a></li><!--
-        --><li><a href="/#for-students" class="button"><strong>For students</strong></a></li>
+        <li><a href="#header" class="button"><img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCIgdmlld0JveD0iMCAwIDQzMy41IDQzMy41IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0MzMuNSA0MzMuNTsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxnIGlkPSJmaWxlLXVwbG9hZCI+CgkJPHBvbHlnb24gcG9pbnRzPSIxNDAuMjUsMzMxLjUgMjkzLjI1LDMzMS41IDI5My4yNSwxNzguNSAzOTUuMjUsMTc4LjUgMjE2Ljc1LDAgMzguMjUsMTc4LjUgMTQwLjI1LDE3OC41ICAgIiBmaWxsPSIjZmZjYzAwIi8+CgkJPHJlY3QgeD0iMzguMjUiIHk9IjM4Mi41IiB3aWR0aD0iMzU3IiBoZWlnaHQ9IjUxIiBmaWxsPSIjZmZjYzAwIi8+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==" height="16" /></a></li><!--
+        --><li><a href="#gsoc-projects" class="button"><strong>Google Summer of Code</strong></a></li><!--
+        --><li><a href="#for-students" class="button"><strong>Instructions for Students</strong></a></li><!--
+        --><li><a href="https://github.com/beamcommunity/beamcommunity.github.com/wiki" class="button"><strong>Projects &amp; Ideas Wiki</strong> <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCIgdmlld0JveD0iMCAwIDQzOC41NDkgNDM4LjU0OSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDM4LjU0OSA0MzguNTQ5OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggZD0iTTQwOS4xMzIsMTE0LjU3M2MtMTkuNjA4LTMzLjU5Ni00Ni4yMDUtNjAuMTk0LTc5Ljc5OC03OS44QzI5NS43MzYsMTUuMTY2LDI1OS4wNTcsNS4zNjUsMjE5LjI3MSw1LjM2NSAgIGMtMzkuNzgxLDAtNzYuNDcyLDkuODA0LTExMC4wNjMsMjkuNDA4Yy0zMy41OTYsMTkuNjA1LTYwLjE5Miw0Ni4yMDQtNzkuOCw3OS44QzkuODAzLDE0OC4xNjgsMCwxODQuODU0LDAsMjI0LjYzICAgYzAsNDcuNzgsMTMuOTQsOTAuNzQ1LDQxLjgyNywxMjguOTA2YzI3Ljg4NCwzOC4xNjQsNjMuOTA2LDY0LjU3MiwxMDguMDYzLDc5LjIyN2M1LjE0LDAuOTU0LDguOTQ1LDAuMjgzLDExLjQxOS0xLjk5NiAgIGMyLjQ3NS0yLjI4MiwzLjcxMS01LjE0LDMuNzExLTguNTYyYzAtMC41NzEtMC4wNDktNS43MDgtMC4xNDQtMTUuNDE3Yy0wLjA5OC05LjcwOS0wLjE0NC0xOC4xNzktMC4xNDQtMjUuNDA2bC02LjU2NywxLjEzNiAgIGMtNC4xODcsMC43NjctOS40NjksMS4wOTItMTUuODQ2LDFjLTYuMzc0LTAuMDg5LTEyLjk5MS0wLjc1Ny0xOS44NDItMS45OTljLTYuODU0LTEuMjMxLTEzLjIyOS00LjA4Ni0xOS4xMy04LjU1OSAgIGMtNS44OTgtNC40NzMtMTAuMDg1LTEwLjMyOC0xMi41Ni0xNy41NTZsLTIuODU1LTYuNTdjLTEuOTAzLTQuMzc0LTQuODk5LTkuMjMzLTguOTkyLTE0LjU1OSAgIGMtNC4wOTMtNS4zMzEtOC4yMzItOC45NDUtMTIuNDE5LTEwLjg0OGwtMS45OTktMS40MzFjLTEuMzMyLTAuOTUxLTIuNTY4LTIuMDk4LTMuNzExLTMuNDI5Yy0xLjE0Mi0xLjMzMS0xLjk5Ny0yLjY2My0yLjU2OC0zLjk5NyAgIGMtMC41NzItMS4zMzUtMC4wOTgtMi40MywxLjQyNy0zLjI4OWMxLjUyNS0wLjg1OSw0LjI4MS0xLjI3Niw4LjI4LTEuMjc2bDUuNzA4LDAuODUzYzMuODA3LDAuNzYzLDguNTE2LDMuMDQyLDE0LjEzMyw2Ljg1MSAgIGM1LjYxNCwzLjgwNiwxMC4yMjksOC43NTQsMTMuODQ2LDE0Ljg0MmM0LjM4LDcuODA2LDkuNjU3LDEzLjc1NCwxNS44NDYsMTcuODQ3YzYuMTg0LDQuMDkzLDEyLjQxOSw2LjEzNiwxOC42OTksNi4xMzYgICBjNi4yOCwwLDExLjcwNC0wLjQ3NiwxNi4yNzQtMS40MjNjNC41NjUtMC45NTIsOC44NDgtMi4zODMsMTIuODQ3LTQuMjg1YzEuNzEzLTEyLjc1OCw2LjM3Ny0yMi41NTksMTMuOTg4LTI5LjQxICAgYy0xMC44NDgtMS4xNC0yMC42MDEtMi44NTctMjkuMjY0LTUuMTRjLTguNjU4LTIuMjg2LTE3LjYwNS01Ljk5Ni0yNi44MzUtMTEuMTRjLTkuMjM1LTUuMTM3LTE2Ljg5Ni0xMS41MTYtMjIuOTg1LTE5LjEyNiAgIGMtNi4wOS03LjYxNC0xMS4wODgtMTcuNjEtMTQuOTg3LTI5Ljk3OWMtMy45MDEtMTIuMzc0LTUuODUyLTI2LjY0OC01Ljg1Mi00Mi44MjZjMC0yMy4wMzUsNy41Mi00Mi42MzcsMjIuNTU3LTU4LjgxNyAgIGMtNy4wNDQtMTcuMzE4LTYuMzc5LTM2LjczMiwxLjk5Ny01OC4yNGM1LjUyLTEuNzE1LDEzLjcwNi0wLjQyOCwyNC41NTQsMy44NTNjMTAuODUsNC4yODMsMTguNzk0LDcuOTUyLDIzLjg0LDEwLjk5NCAgIGM1LjA0NiwzLjA0MSw5LjA4OSw1LjYxOCwxMi4xMzUsNy43MDhjMTcuNzA1LTQuOTQ3LDM1Ljk3Ni03LjQyMSw1NC44MTgtNy40MjFzMzcuMTE3LDIuNDc0LDU0LjgyMyw3LjQyMWwxMC44NDktNi44NDkgICBjNy40MTktNC41NywxNi4xOC04Ljc1OCwyNi4yNjItMTIuNTY1YzEwLjA4OC0zLjgwNSwxNy44MDItNC44NTMsMjMuMTM0LTMuMTM4YzguNTYyLDIxLjUwOSw5LjMyNSw0MC45MjIsMi4yNzksNTguMjQgICBjMTUuMDM2LDE2LjE4LDIyLjU1OSwzNS43ODcsMjIuNTU5LDU4LjgxN2MwLDE2LjE3OC0xLjk1OCwzMC40OTctNS44NTMsNDIuOTY2Yy0zLjksMTIuNDcxLTguOTQxLDIyLjQ1Ny0xNS4xMjUsMjkuOTc5ICAgYy02LjE5MSw3LjUyMS0xMy45MDEsMTMuODUtMjMuMTMxLDE4Ljk4NmMtOS4yMzIsNS4xNC0xOC4xODIsOC44NS0yNi44NCwxMS4xMzZjLTguNjYyLDIuMjg2LTE4LjQxNSw0LjAwNC0yOS4yNjMsNS4xNDYgICBjOS44OTQsOC41NjIsMTQuODQyLDIyLjA3NywxNC44NDIsNDAuNTM5djYwLjIzN2MwLDMuNDIyLDEuMTksNi4yNzksMy41NzIsOC41NjJjMi4zNzksMi4yNzksNi4xMzYsMi45NSwxMS4yNzYsMS45OTUgICBjNDQuMTYzLTE0LjY1Myw4MC4xODUtNDEuMDYyLDEwOC4wNjgtNzkuMjI2YzI3Ljg4LTM4LjE2MSw0MS44MjUtODEuMTI2LDQxLjgyNS0xMjguOTA2ICAgQzQzOC41MzYsMTg0Ljg1MSw0MjguNzI4LDE0OC4xNjgsNDA5LjEzMiwxMTQuNTczeiIgZmlsbD0iIzQ0NDQ0NCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" /></a></li>
       </menu>
     </div>
 
     <section>
       <h2>Welcome to the BEAM Community</h2>
 
-      <p>The BEAM Community is a group of projects that run on the Erlang VM. Our goal is to host relevant projects in the Erlang and Elixir communities, making it easy for those projects to participate in the <a href="https://developers.google.com/open-source/gsoc/" target="_blank">Google Summer of Code (GSoC)</a> (and similar initiatives), giving interested students a wide range of projects to choose from.</p>
+      <p>The BEAM Community is a group of projects that run on the <a href="http://www.erlang.org">Erlang VM</a>. Our goal is to host relevant projects in the Erlang and Elixir communities, making it easy for those projects to participate in the <a href="https://summerofcode.withgoogle.com" target="_blank">Google Summer of Code (GSoC)</a> (and similar initiatives), giving interested students a wide range of projects to choose from.</p>
 
       <p>The <a href="http://en.wikipedia.org/wiki/Erlang_(programming_language)" target="_blank">Erlang VM</a> was originally designed by Ericsson to support distributed, fault-tolerant, soft-real-time, non-stop applications. Many companies around the world like Amazon, Heroku and Activision use the Erlang VM in their stack and databases such as <a href="http://couchdb.apache.org/" target="_blank">CouchDB</a>, <a href="http://basho.com/riak/" target="_blank">Riak</a>, <a href="https://barrel-db.org/" target="_blank">BarrelDB</a>, <a href="https://www.ejabberd.im">ejabberd XMPP server</a>, <a href="http://nerves-project.org/" target="_blank">Nerves project</a> and programming languages like <a href="http://elixir-lang.org" target="_blank">Elixir</a> are built on top of it too.</p>
 
 
-      <h3 id="for-students">I'm a student, what should I do?</h3>
+      <p>BEAM Community has been accepted again to GSoC 2018 as a <a href="https://summerofcode.withgoogle.com/organizations/6486585449644032/">mentoring organisation</a>.</p>
 
-      <p>Now is a great time to get started! Go over our <a href="https://github.com/beamcommunity/beamcommunity.github.com/wiki">Projects / Ideas Wiki</a> and pick the projects and ideas that interest you the most! Also, <a href="https://groups.google.com/d/forum/beam-community" target="_blank">subscribe to our mailing list</a> and join us at <code>#beam-community</code> on irc.freenode.net.</p>
+      <h2 id="gsoc-projects">Google Summer of Code 2018</h2>
 
-      <p>Students should pick their projects and submit proposals from 12th to 27th March 2018. We recommend students to work closely with mentors in order to craft the best proposals. Our mailing list is the best place to ask questions and get more details about our projects!</p>
-
-
-      <!-- <p>BEAM Community has been accepted again in 2017 as a <a href="https://summerofcode.withgoogle.com/organizations/5912941485359104/">mentoring organisation</a>.</p>
-
-      <h3>2017 GSOC projects</h3>
-
-      <p>This year, nine projects have been accepted for Google Summer of Code:</p>
+      <p>This year, five BEAM Community projects have been accepted for GSoC:</p>
 
       <ul>
-        <li>For Lasp:
+        <li><strong><a href="https://github.com/beamcommunity/beamcommunity.github.com/wiki/Project:-Barrel">BarrelDB</a></strong>
           <ul>
-            <li>A Biparite Proposal for Lasp's Lacking Documentation by Matt Wiese</li>
-            <li>Implementing a Real World Application in the Lasp Programming Language by goncalotomas</li>
+            <li>Idea #1: Web UI administration</li>
+            <li>Idea #2: implement a rabbitmq plugin</li>
+            <li>Idea #3: Add discovery capabilities to barrel</li>
+            <li>Idea #4: Add quickcheck testing</li>
+            <li>Idea #5: add windows support</li>
           </ul>
+          <br />
         </li>
-        <li>For Erlang:
+        <li><strong><a href="https://github.com/beamcommunity/beamcommunity.github.com/wiki/Project:-ejabberd">ejabberd</a></strong>
           <ul>
-            <li>ETS support for Erlang Lab by Kacper Mentel</li>
+            <li>Idea #1: Spam fighting with Blockchain</li>
+            <li>Idea #2: Support for Things Discovery service in ejabberd</li>
+            <li>Idea #3: Web UI administration improvements</li>
+            <li>Idea #4: XMPP and HTTP convergence</li>
+            <li>Idea #5: MQTT to XMPP session</li>
           </ul>
+          <br />
         </li>
-        <li>For Elixir:
+        <li><strong><a href="https://github.com/beamcommunity/beamcommunity.github.com/wiki/Project:-Elixir">Elixir</a></strong>
           <ul>
-            <li>A code formatter for Elixir by alexjiao</li>
-            <li>Language Server Protocol implementation for Elixir by Nishith Kumar Shah</li>
+            <li>Idea #1: Port ExDoc to Elm</li>
+            <li>Idea #2: A new MySQL driver for Ecto</li>
+            <li>Idea #3: Improve ElixirBench</li>
           </ul>
+          <br />
         </li>
-        <li>For Barrel:
+        <li><strong><a href="https://github.com/beamcommunity/beamcommunity.github.com/wiki/Project:-Lasp">Lasp</a></strong>
           <ul>
-            <li>Implementation of a RabbitMQ Plugin for BarrelDB by Tah Teche Tende</li>
+            <li>Idea #1: Large-scale testing</li>
+            <li>Idea #2: Improved documentation for Partisan</li>
+            <li>Idea #3: DHT on Partisan</li>
+            <li>Idea #4: Scaling Riak Core</li>
           </ul>
+          <br />
         </li>
-        <li>For Zotonic:
+        <li><strong><a href="https://github.com/beamcommunity/beamcommunity.github.com/wiki/Project:-Zotonic">Zotonic</a></strong>
           <ul>
-            <li>Port Zotonic Shell Scripts to Erlang EScript by Blaise M.</li>
+            <li>Idea #1: Attack &amp; DDoS detection with counter measures</li>
+            <li>Idea #2: Zotonic as Plug for Phoenix</li>
+            <li>Idea #3: Generic job queue, scheduling, and distributed processing</li>
+            <li>Idea #4: Restoring and managing backups</li>
           </ul>
+          <br />
         </li>
-        <li>For ejabberd:
-          <ul>
-            <li>Ejabberd support for "let's encrypt" ACME protocol by Konstantinos Kallas</li>
-            <li>Server-to-Server Stream Management Support for ejabberd by Anna Mukharram</li>
-          </ul>
-        </li>
-      </ul> -->
+      </ul>
 
-      <p>You can learn more on our <a href="https://github.com/beamcommunity/beamcommunity.github.com/wiki">Projects / Ideas Wiki</a> and <a href="https://groups.google.com/d/forum/beam-community" target="_blank">subscribe to our mailing list</a> or join us at <code>#beam-community</code> on irc.freenode.net.</p>
+      <p>You can learn more on our <a href="https://github.com/beamcommunity/beamcommunity.github.com/wiki">Projects &amp; Ideas Wiki</a> and <a href="https://groups.google.com/d/forum/beam-community" target="_blank">subscribe to our mailing list</a> or join us at <code>#beam-community</code> on irc.freenode.net.</p>
+
+
+      <h2 id="for-students">I'm a student, what should I do?</h2>
+
+      <p>Now is a great time to get started! Go over our <a href="https://github.com/beamcommunity/beamcommunity.github.com/wiki">Projects &amp; Ideas Wiki</a> and pick the projects and ideas that interest you the most! Also, <a href="https://groups.google.com/d/forum/beam-community" target="_blank">subscribe to our mailing list</a> and join us at <code>#beam-community</code> on irc.freenode.net.</p>
+
+      <p>Students should pick their projects and submit proposals <strong>from 12th to 27th March 2018.</strong> We recommend students to work closely with mentors in order to craft the best proposals. Our mailing list is the best place to ask questions and get more details about our projects!</p>
+
 
       <h3>Previous years</h3>
 
