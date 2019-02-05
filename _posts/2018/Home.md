@@ -4,14 +4,22 @@ This is the BEAM Community page for 2018 projects. You can also check [official 
 
 This section lists down projects accepted for GSoC 2018 under the BEAM Community organisation.
 
+* [BarrelDB - Create an Elixir client for BarrelDB](#barreldb---create-an-elixir-client-for-barreldb)
+* [Elixir - Add dialyzer task to Elixir](#elixir---add-dialyzer-task-to-elixir)
+* [Elixir - Typespecs to StreamData generators](#elixir---typespecs-to-streamdata-generators)
+* [Elixir – Monitoring performance of Elixir packages with ElixirBench](#elixir--monitoring-performance-of-elixir-packages-with-elixirbench)
+* [Riak – Improving Riak testing suites using Common Test and Intercepts](#riak--improving-riak-testing-suites-using-common-test-and-intercepts)
+* [Tensorflex - Tensorflow bindings for the Elixir programming language](#tensorflex---tensorflow-bindings-for-the-elixir-programming-language)
+
+
 ### BarrelDB - Create an Elixir client for BarrelDB
 
 Make a BarrelDB client in idiomatic Elixir with its tests and documentation. The project scope depending on the progress done may also involve:
 
-* creating a client-enforced schema and document changeset similar to the one in Ecto
-* writing an aggregation framework for the client. Creating a GraphQL API for BarrelDB
-* adding a statistics and health service
-* supporting rate limiting and throttling.
+- creating a client-enforced schema and document changeset similar to the one in Ecto
+- writing an aggregation framework for the client. Creating a GraphQL API for BarrelDB
+- adding a statistics and health service
+- supporting rate limiting and throttling.
 
 
 * **Student**: Jakub Janarek
